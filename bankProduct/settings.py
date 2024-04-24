@@ -18,7 +18,7 @@ ITEM_PIPELINES = {
 
 #MONGO_URI = 'mongodb://192.168.0.235:30000'
 WEBDRIVER_CHROME_PATH = '/opt/webdriver/chrome/chromedriver'
-MONGO_URI = 'mongodb://127.0.0.1:27017'
+MONGO_URI = 'mongodb://localhost:27017'
 MONGO_DATABASE = 'bank'
 MONGO_COLLECTION = "bankProduct"  # collection名
-SAVE_PATH = '/tmp/file'
+SAVE_PATH = '/Users/liuxiaoshuai/Downloads/'
