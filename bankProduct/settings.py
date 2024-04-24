@@ -12,8 +12,8 @@ NEWSPIDER_MODULE = 'bankProduct.spiders'
 ROBOTSTXT_OBEY = False
 
 ITEM_PIPELINES = {
-   'bankproduct.pipelines.MongoPipeline': 300,
-   'bankproduct.pipelines.FilePipeline': 500
+   'bankProduct.pipelines.MongoPipeline': 300,
+   'bankProduct.pipelines.FilePipeline': 500
 }
 
 #MONGO_URI = 'mongodb://192.168.0.235:30000'

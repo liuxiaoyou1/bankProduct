@@ -27,9 +27,9 @@ class BankHttpService(object):
     def uploadResult(self, condition):
         productMsglist = list()
         # 查询数据
-        for bankproductItem in list(self.dao.find(MONGO_COLLECTION, condition)):
-            productBaseInfo = ProductBaseInfo(bankproductItem)
-            productDetailInfo = ProductDetailInfo(bankproductItem)
+        for bankProductItem in list(self.dao.find(MONGO_COLLECTION, condition)):
+            productBaseInfo = ProductBaseInfo(bankProductItem)
+            productDetailInfo = ProductDetailInfo(bankProductItem)
             productMsg = ProductMsg(productBaseInfo, productDetailInfo)
             productMsglist.append(productMsg)
         data = BPDataV1(productMsglist)

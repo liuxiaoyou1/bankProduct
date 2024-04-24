@@ -234,9 +234,9 @@ if __name__ == '__main__':
     logger = logging.getLogger(__name__)
     productMsglist = list()
     dao = MongodbBaseDao("127.0.0.1", 27017, "bank")
-    for bankproductItem in list(dao.find("bankproduct", {'bankCode': 'cib'})):
-        productBaseInfo = ProductBaseInfo(bankproductItem)
-        productDetailInfo = ProductDetailInfo(bankproductItem)
+    for bankProductItem in list(dao.find("bankproduct", {'bankCode': 'cib'})):
+        productBaseInfo = ProductBaseInfo(bankProductItem)
+        productDetailInfo = ProductDetailInfo(bankProductItem)
         productMsg = ProductMsg(productBaseInfo, productDetailInfo)
         productMsglist.append(productMsg)
     print(json.dumps(ProductMsg.objectArrayToJsonArray(productMsglist), ensure_ascii=False))
